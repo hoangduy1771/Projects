@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoang Duy CV</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./stylecoffee.css">
 </head>
 <body>
+    <div class="progress">%</div>
     <div class="cup">
         <div class="handle"></div>
     </div>
+    <div class="preload-text">
+        Have a cup of Coffee, on me!
+    </div>
     
 </body>
+<script>
+    const percentNum = document.querySelector(".progress")
+    let counter = 0;
+    setInterval(() => {
+        if(counter == 100){
+            clearInterval();
+        }else {
+            counter += 1;
+            percentNum.textContent = counter + "%";
+        }
+    }, 20)
+</script>
 </html>

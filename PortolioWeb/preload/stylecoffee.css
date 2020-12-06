@@ -2,18 +2,58 @@ body{
     background-color: #efb54a;
     margin: 0px;
     padding: 0px;
+    font-family: 'Russo One', sans-serif;    
+    
 }
 
 .cup{
-    height: 140px;
+    height: 160px;
     width: 180px;
-    border: 6px solid white;
+    border: 6px solid #efb54a;
     position: absolute;
     top: 40%;
     left: 40%;
     border-radius: 0px 0px 70px 70px;
     background: url(./assets/img/coffee.png);
     box-shadow: 0px 0px 0px 6px white;
+    background-repeat: repeat-x;
+    background-position: 0px 160px;
+    animation: fill 4s infinite;
+}
+@keyframes fill{
+    0%{
+        background-position: 0px 160px;
+    }
+    20%{ 
+        background-position: -300px 120px;
+    }
+    40%{
+        background-position: -900px 80px;
+    }
+    80%{
+        background-position: -1200px -40px;
+    }
+    100%{
+        background-position: 0px 160px;
+    }
+}
+
+.progress{
+    position: absolute;
+    top: 35%;
+    left: 45.1%;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: 'Do Hyeon', sans-serif;    
+}
+
+
+.preload-text{
+    position: absolute;
+    font-size: 50px;
+    font-weight: 400;
+    bottom: 20%;
+    left: 23%;
 }
 
 .handle{
@@ -22,8 +62,7 @@ body{
     background-color: transparent;
     border: 6px solid white;
     position: relative;
-    left: 184px;
+    left: 186px;
     top: 10px;
     border-radius: 0px 25px 80px 0px;
-
 }
