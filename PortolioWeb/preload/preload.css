@@ -1,70 +1,110 @@
-body, html {
+/* body{
+    background-color: white;
+    
+} */
+
+.loader-wrapper {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    text-align: center;
+    background-color: #efb54a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-body {
-  background-color: #242F3F;
+.loader-wrapper.hidden {
+    animation: fadeOut 3.5s;
+    animation-fill-mode: forwards;
 }
 
-.loader {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  border: 4px solid #Fff;
-  top: 50%;
-  animation: loader 2s infinite ease;
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    25% {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    50% {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    90% {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
-.loader-inner {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-  background-color: #fff;
-  animation: loader-inner 2s infinite ease-in;
+.loader-wrapper .cup {
+    height: 160px;
+    width: 180px;
+    border: 6px solid #efb54a;
+    border-radius: 0px 0px 70px 70px;
+    background: url(./assets/img/coffee.png);
+    box-shadow: 0px 0px 0px 6px white;
+    background-repeat: repeat-x;
+    animation: fill 4s;
+}
+@keyframes fill {
+    0% {
+        background-position: 0px 160px;
+    }
+    
+    20% { 
+        background-position: -300px 120px;
+    }
+    
+    40% {
+        background-position: -900px 80px;
+    }
+    
+    80% {
+        background-position: -1200px -40px;
+    }
+    
+    100% {
+        background-position: 0px 160px;
+    }
 }
 
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-  
-  25% {
-    transform: rotate(180deg);
-  }
-  
-  50% {
-    transform: rotate(180deg);
-  }
-  
-  75% {
-    transform: rotate(360deg);
-  }
-  
-  100% {
-    transform: rotate(360deg);
-  }
+.progress {
+    position: absolute;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: 'Do Hyeon', sans-serif;    
 }
 
-@keyframes loader-inner {
-  0% {
-    height: 0%;
-  }
-  
-  25% {
-    height: 0%;
-  }
-  
-  50% {
-    height: 100%;
-  }
-  
-  75% {
-    height: 100%;
-  }
-  
-  100% {
-    height: 0%;
-  }
+
+.preload-text {
+    font-family: 'Russo One', sans-serif;    
+    position: fixed;
+    font-size: 50px;
+    font-weight: 400;
+    top: 60%;   
+    
+}
+
+.handle {
+    height: 70px;
+    width: 40px;
+    background-color: transparent;
+    border: 6px solid white;
+    position: relative;
+    left: 186px;
+    top: 10px;
+    border-radius: 0px 25px 80px 0px;
 }
