@@ -6,7 +6,7 @@ body{
     
 }
 
-.cup{
+.loader-wrapper .cup{
     height: 160px;
     width: 180px;
     border: 6px solid #efb54a;
@@ -38,7 +38,7 @@ body{
     }
 }
 
-.progress{
+.loader-wrapper .progress{
     position: absolute;
     top: 35%;
     left: 45.1%;
@@ -48,7 +48,7 @@ body{
 }
 
 
-.preload-text{
+.loader-wrapper .preload-text{
     position: absolute;
     font-size: 50px;
     font-weight: 400;
@@ -56,7 +56,7 @@ body{
     left: 23%;
 }
 
-.handle{
+.loader-wrapper .handle{
     height: 70px;
     width: 40px;
     background-color: transparent;
