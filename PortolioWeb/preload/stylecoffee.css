@@ -1,0 +1,29 @@
+body{
+    background-color: #efb54a;
+    margin: 0px;
+    padding: 0px;
+}
+
+.cup{
+    height: 140px;
+    width: 180px;
+    border: 6px solid white;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    border-radius: 0px 0px 70px 70px;
+    background: url(./assets/img/coffee.png);
+    box-shadow: 0px 0px 0px 6px white;
+}
+
+.handle{
+    height: 70px;
+    width: 40px;
+    background-color: transparent;
+    border: 6px solid white;
+    position: relative;
+    left: 184px;
+    top: 10px;
+    border-radius: 0px 25px 80px 0px;
+
+}
