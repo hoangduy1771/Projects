@@ -15,7 +15,7 @@ setInterval(() => {
 setTimeout(() =>{
     // preloadText.textContent = "Drinking coffee"
     // setTimeout(() => {
-        preloadText.textContent = "Drinking Coffee"
+        preloadText.textContent = "Coffee's Ready!"
     // }, 2000)
 }, 2500)
 
