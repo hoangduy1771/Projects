@@ -4,6 +4,15 @@ body{
     
 }
 
+a:hover {
+    color: red;
+} 
+
+a{
+    color: #0202f8;
+    
+}
+
 .title{
     color: #f0f0f0;
     font-size: 70px;
