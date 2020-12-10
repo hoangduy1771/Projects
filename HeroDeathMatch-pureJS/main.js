@@ -62,9 +62,6 @@ const player3 = new Hero("Iron Man", randomHP3, randomAttack3);
 var randomHPThanos = Math.round(Math.random() * 1000);
 var randomAttackThanos = Math.round(Math.random() * 10);
 const thanos = new Thanos("Thanos", randomHPThanos, randomAttackThanos);
-// console.log({ironMan, thor})
-// ironMan.attack(thor);
-// console.log({ironMan, thor})
 
 // PVP:
 // Deathmatch
@@ -96,7 +93,9 @@ function fightLMS() {
 function lastManStanding() {
   gameModeSelect();
 
+  
   for(var i = 0; i < player1.hp; --i) {
+    
     console.log(`[Turn: ${Math.abs(i) + 1}]`);
     fightLMS()
 
@@ -150,7 +149,7 @@ function bossFight() {
       >>> Thanos Win!!!`);
       break;
     }
-    
+
     if(snapChance >= 90) {
       console.log(`>>> Iron Man Steal The Gauntlet.
       Iron Man: "And I.. Am... Iron Man"
