@@ -63,6 +63,12 @@ var randomHPThanos = Math.round(Math.random() * 1000);
 var randomAttackThanos = Math.round(Math.random() * 10);
 const thanos = new Thanos("Thanos", randomHPThanos, randomAttackThanos);
 
+function delayPrint(ms) {
+  return new Promise(resolve => {
+      setTimeout(resolve, ms)
+  })
+}
+
 // PVP:
 // Deathmatch
 
@@ -93,23 +99,23 @@ function fightLMS() {
 function lastManStanding() {
   gameModeSelect();
 
-  
-  for(var i = 0; i < player1.hp; --i) {
-    
-    console.log(`[Turn: ${Math.abs(i) + 1}]`);
-    fightLMS()
 
-    if(player2.hp <= 0 && player1.hp <= 0) {
-      console.log(">>> Draw, Upgrade your hero !!");
-      break;
-    } else if(player1.hp <= 0) {
-      console.log(`>>> ${player2.name} Win!!!"`);
-      break;
-    } else if(player2.hp <= 0) {
-      console.log(`>>> ${player1.name} Win!!!`);
-      break;
-    }
-  }
+      for(var i = 0; i < player1.hp; --i) {
+    
+        console.log(`[Turn: ${Math.abs(i) + 1}]`);
+        fightLMS()
+    
+        if(player2.hp <= 0 && player1.hp <= 0) {
+          console.log(">>> Draw, Upgrade your hero !!");
+          break;
+        } else if(player1.hp <= 0) {
+          console.log(`>>> ${player2.name} Win!!!"`);
+          break;
+        } else if(player2.hp <= 0) {
+          console.log(`>>> ${player1.name} Win!!!`);
+          break;
+        }
+      }
   // console.log(i);
 }
 lastManStanding();
